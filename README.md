@@ -7,7 +7,7 @@
  1. 安装包文件
 
 	``` bash
-	$ composer require misechow/laravel-geetest
+	$ composer require zbrettonye/geetest
 	```
 
 ## 配置
@@ -17,19 +17,19 @@
 1. config/app.php 注册 ServiceProvider:
 	
 	```php
-	Misechow\Geetest\GeetestServiceProvider::class,
+	ZBrettonYe\Geetest\GeetestServiceProvider::class,
 	```
 
 2. config/app.php 添加 Alias
 
      ```php
-     'Geetest' => Misechow\Geetest\Facades\Geetest::class,
+     'Geetest' => ZBrettonYe\Geetest\Facades\Geetest::class,
      ```
 
 3. 创建配置文件、视图级资源文件：
 
 	```shell
-	php artisan vendor:publish --provider='Misechow\Geetest\GeetestServiceProvider'
+	php artisan vendor:publish --provider='ZBrettonYe\Geetest\GeetestServiceProvider'
 	```
 	
 4. `.env` 文件增加配置项 `GEETEST_ID` 和 `GEETEST_KEY` 或 通过添加 Component CaptchaVerify 来获取 ID 和 KEY
